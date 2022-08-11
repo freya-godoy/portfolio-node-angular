@@ -14,6 +14,7 @@ import { HttpParams } from '@angular/common/http';
 export class DetailComponent implements OnInit {
   public url: string;
   public project: Project;
+  public confirm: boolean;
 
   constructor(
     private projectService: ProjectService,
@@ -22,6 +23,7 @@ export class DetailComponent implements OnInit {
   ) {
     this.url = Global.url;
     this.project = <any>Response;
+    this.confirm = false;
   }
 
   ngOnInit() {
@@ -46,15 +48,19 @@ export class DetailComponent implements OnInit {
     )
   }
 
-  deleteProject(id: any){
+  setConfirm(confirm: any) {
+    this.confirm = confirm;
+  }
+
+  deleteProject(id: any) {
     this.projectService.deleteProject(id).subscribe(
       response => {
-        if(response.project){
+        if (response.project) {
           this.router.navigate(['/proyectos']);
         }
       },
-      error =>{
-     console.log(<any> error);
+      error => {
+        console.log(<any>error);
       }
     )
   }

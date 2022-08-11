@@ -220,19 +220,20 @@ form input[type="submit"],
 }
 
 .button-edit,
-.button-delete{
-    width: 20%;
+.button-delete {
+    width: 30%;
+    text-align: center;
     float: left;
     margin-right: 10px;
     text-decoration: none;
 }
 
-.button-edit{
+.button-edit {
     background-color: #8a6bd3;
     border: 1px black solid;
 }
 
-.button-delete{
+.button-delete {
     background-color: #5522cc;
     border: 1px black solid;
 }
@@ -311,4 +312,10 @@ form input[disabled] {
 .project a {
     text-decoration: none;
     color: black;
+}
+
+.confirm {
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
 }

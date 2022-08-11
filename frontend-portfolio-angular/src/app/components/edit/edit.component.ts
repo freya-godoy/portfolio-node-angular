@@ -21,6 +21,7 @@ export class EditComponent implements OnInit {
   public status: string; // 'success', 'failed'
   public filesToUpload: Array<File>;
   public url: string;
+  
   constructor(
     private projectService: ProjectService,
     private uploadService: UploadService,
@@ -54,13 +55,14 @@ export class EditComponent implements OnInit {
       }
     )
   }
+
   onSubmit() {
     this.projectService.updateProject(this.project).subscribe(
       response => {
         if (response.project) {
 
           // Subir la imagen
-          if (this.filesToUpload) {
+          if (this.filesToUpload.length) {
             this.uploadService.makeFileRequest(Global.url + "upload-image/" + response.project._id, [], this.filesToUpload, 'image')
               .then((result: any) => {
                 this.save_project = result.project;
