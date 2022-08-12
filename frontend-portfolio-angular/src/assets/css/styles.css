@@ -319,3 +319,7 @@ form input[disabled] {
     font-weight: bold;
     margin-top: 20px;
 }
+
+.slider-contenedor {
+    margin: auto;
+}

@@ -13,7 +13,7 @@ import { EditComponent } from "./components/edit/edit.component";
 //arrat de objetos
 const appRoutes: Routes = [
     { path: '', component: AboutComponent },
-    { path: 'sonbre-mi', component: AboutComponent },
+    { path: 'sobre-mi', component: AboutComponent },
     { path: 'proyectos', component: ProjectsComponent },
     { path: 'crear-proyecto', component: CreateComponent },
     { path: 'contacto', component: ContactComponent },
