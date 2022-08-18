@@ -1,7 +1,36 @@
 <div class="container">
-    <div class="galeria">
+
+
+    <h1>Contacto</h1>
+
+    <div id="texto" #textos>
+        <p appResaltado >
+            <!-- <p [hidden]="true"> -->
+            Esta es la pagina de contacto, puedes enviarnos cualquier duda
+        </p>
+    </div>
+
+
+</div>
+
+<!-- <div class="galeria">
         <div class="image-container"><img src="assets/img/rubio(2).jpg" title="Funky roots" width="100%" height="auto"></div>
         <div class="image-container"><img src="assets/img/rubio(3).jpg" title="The long and winding road" width="100%" height="auto"></div>
         <div class="image-container"><img src="assets/img/rubio(4).jpg" title="Happy trees" width="100%" height="auto"></div>
+    </div> -->
+<!-- Tamaño del slider:
+    <input type="number" [(ngModel)]="widthSlider" (keyup.enter)="cargarSlider()" />
+    <button (click)="cargarSlider()">Cargar slider</button>
+    <button (click)="resetearSlider()">Resetear slider</button>
+
+    <div *ngIf="anchorToSlider">
+
+        <slider [anchor]="anchorToSlider" [etiquetas]="captions" (conseguirAutor)="getAutor($event)"></slider>
+
     </div>
-</div>
+
+    <div class="container" *ngIf="autor">
+
+        {{autor.nombre + "" + autor.webside}}
+
+    </div> -->
